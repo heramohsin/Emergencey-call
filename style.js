@@ -34,7 +34,18 @@ callButtons.forEach(button => {
     coins -= 20;
     coinEl.textContent = coins;
   });
+  });
+// --------------copycount--------------
+const copyBtn = document.querySelector(".btn-success");
+const copyCountSpan = copyBtn.querySelector(".copy");
+let copyCount = parseInt(copyCountSpan.textContent) || 0;
+
+copyBtn.addEventListener("click", () => {
+  alert("Copied!");
+  copyCount++;
+  copyCountSpan.textContent = copyCount;
 });
+
 
 
 
